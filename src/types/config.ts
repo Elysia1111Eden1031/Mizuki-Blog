@@ -1,4 +1,4 @@
-import type { AUTO_MODE, DARK_MODE, LIGHT_MODE } from "@constants/constants";
+import type { AUTO_MODE, DARK_MODE, LIGHT_MODE } from "../constants/constants";
 
 export type SiteConfig = {
 	title: string;
@@ -81,12 +81,14 @@ export enum LinkPreset {
 	Friends = 3,
 	Anime = 4,
 	Diary = 5,
+	Gallery = 6,
 }
 
 export type NavBarLink = {
 	name: string;
 	url: string;
 	external?: boolean;
+	children?: (NavBarLink | LinkPreset)[]; // 支持子菜单，可以是NavBarLink或LinkPreset
 };
 
 export type NavBarConfig = {
@@ -167,13 +169,13 @@ export type MusicPlayerConfig = {
 };
 
 // 组件配置类型定义
-export type WidgetComponentType = 
-	| "profile" 
-	| "announcement" 
-	| "categories" 
-	| "tags" 
-	| "toc" 
-	| "music-player" 
+export type WidgetComponentType =
+	| "profile"
+	| "announcement"
+	| "categories"
+	| "tags"
+	| "toc"
+	| "music-player"
 	| "custom";
 
 export type WidgetComponentConfig = {
