@@ -1,3 +1,11 @@
+/*
+ * @Author: yumoyjs 3372963042@qq.com
+ * @Date: 2025-08-22 18:03:09
+ * @LastEditors: yumoyjs 3372963042@qq.com
+ * @LastEditTime: 2025-08-26 17:25:54
+ * @FilePath: \undefinedd:\Mizuki-Blog\src\config.ts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import type {
 	AnnouncementConfig,
 	CommentConfig,
@@ -175,12 +183,12 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "Bilibli",
 			icon: "fa6-brands:bilibili",
-			url: "https://space.bilibili.com/701864046",
+			url: "",
 		},
 		{
 			name: "Gitee",
 			icon: "mdi:git",
-			url: "https://gitee.com/matsuzakayuki",
+			url: "",
 		},
 		{
 			name: "GitHub",
@@ -232,7 +240,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 };
 
 export const footerConfig: FooterConfig = {
-	enable: false, // 是否启用Footer HTML注入功能
+	enable: true, // 是否启用Footer HTML注入功能
 };
 
 // 直接编辑 FooterConfig.html 文件来添加备案号等自定义内容
@@ -323,7 +331,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 		// 是否启用默认动画
 		enable: true,
 		// 基础延迟时间（毫秒）
-		baseDelay: 0,
+		baseDelay: 5000,
 		// 递增延迟时间（毫秒），每个组件依次增加的延迟
 		increment: 50,
 	},
